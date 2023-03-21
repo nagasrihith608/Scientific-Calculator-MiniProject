@@ -1,7 +1,10 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Calculator {
-//    private static final Logger logger = LogManager.getLogger(Calculator.class);
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
     public Calculator() {
-//        logger.info("Calculator Initialised");
+        logger.info("Calculator Initialised");
     }
 
     public static Double squareRoot(double x){
@@ -19,7 +22,7 @@ public class Calculator {
 
             }
         } catch (Exception e) {
-//            logger.error(e);
+            logger.error(e);
         }
 
 
@@ -46,7 +49,7 @@ public class Calculator {
 
             }
         } catch (Exception e) {
-//            logger.error(e);
+            logger.error(e);
         }
 
 
@@ -71,7 +74,7 @@ public class Calculator {
 
             }
         } catch (Exception e) {
-//            logger.error(e);
+            logger.error(e);
         }
 
         return result;

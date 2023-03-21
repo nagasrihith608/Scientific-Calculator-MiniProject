@@ -1,5 +1,8 @@
 import java.util.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 public class Main {
+    private static final Logger logger = LogManager.getLogger(Main.class);
     public static void main(String[] args) {
 
         System.out.println("Welcome to the Scientific Calculator, Please enter your choice1");
@@ -20,20 +23,26 @@ public class Main {
                 case 1:
                     System.out.println("Enter a number");
                     num1 = sc.nextDouble();
-                    System.out.println("The Square root of " + num1 + " is " + Calculator.squareRoot(num1));
+                    logger.info("[SQRT] - " + num1);
+                    logger.info("[RESULT - SQRT] - " + Calculator.squareRoot(num1));
+//                    logger.info("The Square root of " + num1 + " is " + Calculator.squareRoot(num1));
                     break;
 
                 case 2:
                     System.out.println("Enter a number");
                     num1 = sc.nextDouble();
-                    System.out.println("The factorial of " + num1 + " is " + Calculator.factorial(num1));
+                    logger.info("[FACTORIAL] - " + num1);
+                    logger.info("[RESULT - FACTORIAL] - " + Calculator.factorial(num1));
+//                    logger.info("The factorial of " + num1 + " is " + Calculator.factorial(num1));
                     break;
 
 
                 case 3:
                     System.out.println("Enter a number");
                     num1 = sc.nextDouble();
-                    System.out.println("The Natural Logarithm of " + num1 + " is " + Calculator.logarithm(num1));
+                    logger.info("[LOG] - " + num1);
+                    logger.info("[RESULT - LOG] - " + Calculator.logarithm(num1));
+//                    logger.info("The Natural Logarithm of " + num1 + " is " + Calculator.logarithm(num1));
                     break;
 
                 case 4:
@@ -41,17 +50,18 @@ public class Main {
                     num1 = sc.nextDouble();
                     System.out.println("Enter a number for the power");
                     num2 = sc.nextDouble();
-                    System.out.println("The Value of " + num1 + " to the power of " + num2 + " is " + Calculator.power(num1, num2));
+                    logger.info("[POWER] - " + num1 + ", " + num2);
+                    logger.info("[RESULT - POWER] - " + Calculator.power(num1, num2));
+//                    logger.info("The Value of " + num1 + " to the power of " + num2 + " is " + Calculator.power(num1, num2));
                     break;
 
                 default:
-//                    logger.error("Invalid Choice");
+                    logger.error("Invalid Choice");
                     break;
             }
 
             operation = sc.nextInt();
         }
-//        logger.info("Exiting Calculator");
-
+        logger.info("Exiting Calculator");
     }
 }
