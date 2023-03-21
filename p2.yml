@@ -4,7 +4,7 @@
   tasks:
     - name: Pull junit devops image
       docker_image:
-        name: sk12092001/calculator
+        name: nagasrihith608/scientific-calculator-miniproject
         source: pull
 
     - name: creating updated container
