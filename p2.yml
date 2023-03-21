@@ -1,0 +1,11 @@
+---
+- name: pull mini_project image
+  hosts: all
+  tasks:
+    - name: Pull junit devops image
+      docker_image:
+        name: sk12092001/calculator
+        source: pull
+
+    - name: creating updated container
+      shell: docker run -id nagasrihith608/scientific-calculator-miniproject
