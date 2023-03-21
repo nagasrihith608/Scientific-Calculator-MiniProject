@@ -10,32 +10,30 @@ public class Main {
         System.out.println("4. Power function");
 
         Scanner sc = new Scanner(System.in);
-        Calculator calculator = new Calculator();
-
-        int op = sc.nextInt();
+        int operation = sc.nextInt();
         double num1, num2;
 
-        while(op != 0)
+        while(operation != 0)
         {
-            switch (op)
+            switch (operation)
             {
                 case 1:
                     System.out.println("Enter a number");
                     num1 = sc.nextDouble();
-                    System.out.println("The Square root of " + num1 + " is " + calculator.squareRoot(num1));
+                    System.out.println("The Square root of " + num1 + " is " + Calculator.squareRoot(num1));
                     break;
 
                 case 2:
                     System.out.println("Enter a number");
                     num1 = sc.nextDouble();
-                    System.out.println("The factorial of " + num1 + " is " + calculator.factorial(num1));
+                    System.out.println("The factorial of " + num1 + " is " + Calculator.factorial(num1));
                     break;
 
 
                 case 3:
                     System.out.println("Enter a number");
                     num1 = sc.nextDouble();
-                    System.out.println("The Natural Logarithm of " + num1 + " is " + calculator.logarithm(num1));
+                    System.out.println("The Natural Logarithm of " + num1 + " is " + Calculator.logarithm(num1));
                     break;
 
                 case 4:
@@ -43,7 +41,7 @@ public class Main {
                     num1 = sc.nextDouble();
                     System.out.println("Enter a number for the power");
                     num2 = sc.nextDouble();
-                    System.out.println("The Value of " + num1 + " to the power of " + num2 + " is " + calculator.power(num1, num2));
+                    System.out.println("The Value of " + num1 + " to the power of " + num2 + " is " + Calculator.power(num1, num2));
                     break;
 
                 default:
@@ -51,7 +49,7 @@ public class Main {
                     break;
             }
 
-            op = sc.nextInt();
+            operation = sc.nextInt();
         }
 //        logger.info("Exiting Calculator");
 
