@@ -38,7 +38,7 @@ public class CalculatorTest {
         Assertions.assertEquals(2, Calculator.power(2, 1), 1e-15);
         Assertions.assertEquals(4, Calculator.power(2, 2), 1e-15);
         Assertions.assertEquals(8, Calculator.power(2, 3), 1e-15);
-        Assertions.assertEquals(16, Calculator.power(2, 4), 1e-15);
+        Assertions.assertEquals(32, Calculator.power(2, 5), 1e-15);
     }
 
 }
