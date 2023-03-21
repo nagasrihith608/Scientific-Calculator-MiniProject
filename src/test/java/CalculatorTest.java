@@ -1,12 +1,12 @@
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 
 
-public class TestCalculator {
+public class CalculatorTest {
 
     @Test
-    public void testSquareRoot()
+    public void test_SquareRoot()
     {
         Assertions.assertEquals(1, Calculator.squareRoot(1), 1e-15);
         Assertions.assertEquals(2, Calculator.squareRoot(4), 1e-15);

@@ -19,6 +19,8 @@ public class Calculator {
             else
             {
                 result = Math.sqrt(x);
+                logger.info("[SQRT] - " + x);
+                logger.info("[RESULT - SQRT] - " + result);
 
             }
         } catch (Exception e) {
@@ -46,6 +48,8 @@ public class Calculator {
                 {
                     result = result*i;
                 }
+                logger.info("[FACTORIAL] - " + x);
+                logger.info("[RESULT - FACTORIAL] - " + result);
 
             }
         } catch (Exception e) {
@@ -71,6 +75,8 @@ public class Calculator {
             } else
             {
                 result = Math.log(x);
+                logger.info("[LOG] - " + x);
+                logger.info("[RESULT - LOG] - " + result);
 
             }
         } catch (Exception e) {
@@ -82,6 +88,9 @@ public class Calculator {
 
     public static Double power(double x, double y)
     {
-        return Math.pow(x, y);
+        Double result = Math.pow(x, y);
+        logger.info("[POWER] - " + x + ", " + y);
+        logger.info("[RESULT - POWER] - " + result);
+        return result;
     }
 }
