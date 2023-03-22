@@ -1,33 +1,11 @@
+---
 - name: pull mini_project image
   hosts: all
   tasks:
-    # - name: Start service
-    #   service:
-    #     name: docker
-    #     state: started
-
-    - name: Install pip requests library
-      pip:
-        name: requests
-        state: present
-
-    - name: stopping old container
-      shell: docker ps -aq --filter=status=running | xargs -r docker stop
-
-    - name: deleting old container
-      shell: docker ps -aq --filter=status=exited | xargs -r docker rm
-
-    - name: remove old image
-      shell: docker images -q --filter=reference="nagasrihith608/scientific-calculator-miniproject" | xargs -r docker rmi -f
-
-    - name: pull the image
+    - name: Pull junit devops image
       docker_image:
-        name: nagasrihith608/scientific-calculator-miniproject:latest
+        name: nagasrihith608/scientific-calculator-miniproject
         source: pull
 
     - name: creating updated container
-      shell: docker run -id nagasrihith608/scientific-calculator-miniproject:latest
-      
-      
-      
-#       nagasrihith608/scientific-calculator-miniproject:latest
+      shell: docker run -id nagasrihith608/scientific-calculator-miniproject
