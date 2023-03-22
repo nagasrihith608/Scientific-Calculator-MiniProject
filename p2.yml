@@ -1,11 +1,12 @@
 ---
-- name: pull mini_project image
+- name: Copy jar file to inventory i.e. Pull docker image
   hosts: all
   tasks:
     - name: Pull junit devops image
       docker_image:
         name: nagasrihith608/scientific-calculator-miniproject
         source: pull
-
-    - name: running container
+    - name : Running container
       shell: docker run -it -d nagasrihith608/scientific-calculator-miniproject
+
+#      nagasrihith608/scientific-calculator-miniproject
