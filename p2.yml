@@ -8,4 +8,4 @@
         source: pull
 
     - name: running container
-      shell: docker run -id nagasrihith608/scientific-calculator-miniproject
+      shell: docker run -it -d nagasrihith608/scientific-calculator-miniproject
