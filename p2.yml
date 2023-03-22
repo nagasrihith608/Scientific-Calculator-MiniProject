@@ -8,5 +8,3 @@
         source: pull
     - name : Running container
       shell: docker run -it -d nagasrihith608/scientific-calculator-miniproject
-
-#      nagasrihith608/scientific-calculator-miniproject
