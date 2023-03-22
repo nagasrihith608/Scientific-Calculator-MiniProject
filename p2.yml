@@ -7,5 +7,5 @@
         name: nagasrihith608/scientific-calculator-miniproject
         source: pull
 
-    - name: creating updated container
+    - name: running container
       shell: docker run -id nagasrihith608/scientific-calculator-miniproject
