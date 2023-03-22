@@ -8,7 +8,7 @@ public class CalculatorTest {
     @Test
     public void test_SquareRoot_true_positive()
     {
-        Assertions.assertEquals(5, Calculator.squareRoot(25), 1e-15);
+        Assertions.assertEquals(1, Calculator.squareRoot(1), 1e-15);
         Assertions.assertEquals(2, Calculator.squareRoot(4), 1e-15);
         Assertions.assertEquals(3, Calculator.squareRoot(9), 1e-15);
         Assertions.assertEquals(4, Calculator.squareRoot(16), 1e-15);
