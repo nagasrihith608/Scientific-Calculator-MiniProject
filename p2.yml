@@ -1,14 +1,33 @@
----
-- name: Pull docker image of Calculator
-  hosts: ansible all --list-hosts
+- name: pull mini_project image
+  hosts: all
   tasks:
-    - name: Start docker service
-      service:
-        name: docker
-        state: started
+    # - name: Start service
+    #   service:
+    #     name: docker
+    #     state: started
 
-    - name: Pull docker image
-      shell: docker pull nagasrihith608/scientific-calculator-miniproject/calc:latest
+    - name: Install pip requests library
+      pip:
+        name: requests
+        state: present
 
-    - name: Run container on remote host
-      shell: docker run -it -d nagasrihith608/scientific-calculator-miniproject:latest /bin/bash
+    - name: stopping old container
+      shell: docker ps -aq --filter=status=running | xargs -r docker stop
+
+    - name: deleting old container
+      shell: docker ps -aq --filter=status=exited | xargs -r docker rm
+
+    - name: remove old image
+      shell: docker images -q --filter=reference="nagasrihith608/scientific-calculator-miniproject" | xargs -r docker rmi -f
+
+    - name: pull the image
+      docker_image:
+        name: nagasrihith608/scientific-calculator-miniproject:latest
+        source: pull
+
+    - name: creating updated container
+      shell: docker run -id nagasrihith608/scientific-calculator-miniproject:latest
+      
+      
+      
+#       nagasrihith608/scientific-calculator-miniproject:latest
